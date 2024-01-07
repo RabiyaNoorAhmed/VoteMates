@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #227AA1;
+    --body-color: #EDC339;
+    --text-color: #01577D;
+    --container: #D1C6BE;
+    --number: #544F53;
+    --body-text: 'Montserrat', sans-serif;
+    --myfont-: 'Great Vibes', cursive;
+}
+
+body {
+    background-color: var(--body-color);
+    font-family: var(--body-text);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-image: url(./images/friends.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    z-index: -2;
+}
+
+body::before {
+    left: 0;
+    transform: scaleX(-1)
+}
+
+body::after {
+    right: 0;
+}
+
+/* Custom ScrollBar */
+::-webkit-scrollbar {
+    width: 1.3100rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--text-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+/*Custom ScrollBar End */
+h1 {
+    font-family: var(--myfont-);
+    font-size: 5rem;
+    padding: 10px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+h2 {
+    font-family: var(--myfont-);
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.container {
+    background-color: var(--main-color);
+    padding: 1rem 2rem;
+    margin: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.input {
+    margin-top: 15px;
+}
+
+.friendInput {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: 1px solid var(--container);
+    border-radius: 5px;
+
+}
+
+.friendInput:focus {
+    outline: 0;
+    border-color: var(--container);
+}
+
+.addBtn {
+    padding: 12px 18px;
+    font-size: 16px;
+    background: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--container);
+    cursor: pointer;
+    font-family: var(--body-text);
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+#addBtn:hover {
+    transform: scale(1.1);
+}
+
+.friend-list ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 20px;
+    border: 1px solid var(--container);
+    border-radius: 20px;
+    margin: 20px;
+    color: var(--container);
+    cursor: pointer;
+}
+
+.friend-list ul li {
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.friend-list ul:hover {
+    background-color: var(--container);
+
+}
+
+.friend-list ul:hover {
+    color: var(--number);
+}
+
+@media screen and (max-width: 768px) {
+
+    body::before,
+    body::after {
+        width: 100%;
+        transform: scaleX(1);
+    }
+
+    body::before {
+        display: none;
+    }
+
+    body::after {
+        top: 450px;
+        background-position: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
