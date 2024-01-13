@@ -24,6 +24,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     z-index: -1;
 
 }
@@ -153,17 +154,7 @@ h2 {
 
     body::before,
     body::after {
-        width: 100%;
-        transform: scaleX(1);
-    }
-
-    body::before {
         display: none;
-    }
-
-    body::after {
-        top: 450px;
-        background-position: center;
     }
 
     h1 {
@@ -171,6 +162,17 @@ h2 {
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .input {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .addBtn {
+        margin-top: 5px;
+        padding: 20px 10px;
     }
 }
